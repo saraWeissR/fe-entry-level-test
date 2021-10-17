@@ -7,6 +7,7 @@ export function listen(target, type, callback, capture) {
 	target.addEventListener(type, callback, !!capture);
 }
 
+//collect all events and link targetElement to event 
 export function delegateEvent(target, selector, type, handler, capture) {
 	const dispatchEvent = event => {
 		const targetElement = event.target;

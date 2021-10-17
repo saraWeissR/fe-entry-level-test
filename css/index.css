@@ -141,11 +141,13 @@ body {
 	color: #737373;
 }
 
+	/* I chose scroll because I have items I want to display  */
 .todo-list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	max-height: 300px;
+	overflow-y: scroll;
 }
 
 .todo-list li {

@@ -15,6 +15,7 @@ export default class View {
     this.$main = query('.main');
     this.$toggleAll = query('.toggle-all');
     this.$newTodo = query('.new-todo');
+    this.$importTasks = query('.add-tasks');
 
     delegateEvent(this.$todoList, 'li label', 'dblclick', ({ target }) => {
       this.editItem(target);
@@ -60,6 +61,10 @@ export default class View {
 
   setCompleteAllCheckbox(checked) {
     this.$toggleAll.checked = !!checked;
+  }
+
+  setFocusToNewTodo(){
+    this.$newTodo.focus();
   }
 
   updateFilterButtons(route) {
@@ -110,6 +115,11 @@ export default class View {
     listen(this.$toggleAll, 'click', ({ target }) => {
       handler(target.checked);
     });
+  }
+
+  bindNewTasks(handler)
+  {
+    listen(this.$importTasks, 'click',)
   }
 
   bindRemoveItem(handler) {

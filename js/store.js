@@ -20,6 +20,19 @@ export default class Store {
 		}
 	}
 
+
+	//A real project I would add a separate file that would manage my requests / response, and i can use promise\observable
+//	getTask() {
+  //      const url = require('https://jsonplaceholder.typicode.com/todos');
+//		fetch(url)
+	//		.then(function(response) {
+	//			console.log(response.json())
+	//		})
+	//		.then(function(myJson) {
+	//			console.log(myJson);
+	//		});
+	//}
+
 	find(query, callback) {
 		const todos = this.getLocalStorage();
 

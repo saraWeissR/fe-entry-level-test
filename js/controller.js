@@ -26,9 +26,11 @@ export default class Controller {
 		this._activeRoute = route;
 		this._filter();
 		this.view.updateFilterButtons(route);
+		this.view.setFocusToNewTodo();
 	}
 
 	addItem(title) {
+	title =title.replace('<','').replace('>','');
 		this.store.insert({
 			id: Date.now(),
 			title,
